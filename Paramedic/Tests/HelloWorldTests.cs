@@ -11,13 +11,12 @@ public class HelloWorldTests
         [TestMethod]
         public void TestMethod1()
         {
-            using (var sw = new StringWriter())
-            {
-                Console.SetOut(sw);
+            var sw = new StringWriter();
+            
+            Console.SetOut(sw);
 
-                var result = sw.ToString().Trim();
-                Assert.AreEqual(1, 1);
-            }
+            var result = sw.ToString().Trim();
+            Assert.AreEqual(1, 1);
         }
     }
 }
